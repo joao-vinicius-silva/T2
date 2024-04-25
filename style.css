@@ -1,0 +1,468 @@
+body {
+    line-height: 1.5;
+    font-size: 16px;
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+::before,::after {
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+.section {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    display: block;
+    opacity: 1;
+    padding: 0 30px;
+}
+.main-content {
+    padding-left: 270px;
+}
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+.section .container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+.section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+.section-title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+}
+.section-title h2::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: rgb(45, 23, 23);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.section-title h2::after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: rgb(54, 30, 30);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.shadow-dark {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.aside {
+    width: 270px;
+    background-color: rgb(36, 35, 35);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 100%;
+    border-right: 1px solid rgba(245, 245, 245, 0.633);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.aside .logo {
+    position:absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.aside .logo a {
+    color: rgb(222, 222, 222);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+.aside .logo a::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid rgb(54, 37, 37);
+    border-left: 5px solid red;
+    bottom: 0;
+    left: 0;
+}
+.aside .logo a::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid rgb(54, 37, 37);
+    border-right: 5px solid red;
+    top: 0;
+    right: 0;
+}
+.aside .nav-toggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: rgb(118, 39, 39);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.aside .nav-toggler span {
+    height: 2px;
+    width: 18px;
+    background: rgb(255, 248, 248);
+    display: inline-block;
+    position: relative;
+}
+.aside .nav-toggler span::before {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background-color: red;
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+.aside .nav-toggler span::after {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background-color: red;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+.aside .logo a span {
+    font-size: 40px;
+}
+.aside .nav {
+    margin-top: 50px;
+}
+.aside .nav li {
+    margin-bottom: 20px;
+    display: block;
+}
+.aside .nav li a {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid whitesmoke;
+    color: black;
+    padding: 5px 15px;
+}
+
+.aside .nav li a.active{
+    color: rgb(91, 52, 52);
+}
+.aside .nav li a i {
+    margin-right: 15px;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    color: rgb(156, 95, 15);
+}
+.home .home-info {
+    flex: 0 0 60%;
+    min-width: 60%;
+}
+.home .home-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+
+    text-align: center;
+    position: relative;
+}
+.home-img::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid rgb(54, 37, 37);
+    border-right: 10px solid red;
+    right: 20px;
+    bottom: -40px;
+}
+.home-img::before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid rgb(54, 37, 37);
+    border-left: 10px solid red;
+    left: -20px;
+    top: -40px;
+}
+
+h3.hello {
+    font-size: 28px;
+    margin: 15px 0;
+}
+h3.hello span {
+    font-size: 30px;
+    font-weight: 700;
+}
+.home-info p {
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.578);
+}
+.home .home-img img {
+    margin: auto;
+    border-radius: 5px;
+    height: 400px;
+    width: 300px;
+}
+.curriculum .personal-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+}
+.curriculum .info-title {
+    display: block;
+    text-align: center;
+    font-weight: 900;
+}
+.curriculum .personal-info .info-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.curriculum .personal-info .info-item p {
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.888);
+    border-bottom: 1px solid beige;
+}
+
+.curriculum .personal-info .info-item p span {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.700);
+    margin-left: 4px;
+    display: inline-block;
+}
+.curriculum .profile-info {
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.curriculum .education,
+.curriculum .experience {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+}
+.curriculum .skills,
+.curriculum .projects {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+}
+.curriculum h3.title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.889);
+}
+.curriculum .timline-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.curriculum .timline {
+    background: rgba(0, 0, 0, 0.112);
+    padding: 30px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.038);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+.curriculum .timline .timline-item {
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+.curriculum .timline .timline-item:last-child {
+    padding-bottom: 0;
+}
+.curriculum .timline .timline-item::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+    background: rgb(75, 65, 65);
+}
+.curriculum .timline .circle-dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgb(67, 43, 43);
+}
+.curriculum .timline .timline-date {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: rgba(84, 44, 122, 0.684);
+}
+.curriculum .timline .timline-date .fa {
+    margin-right: 5px;
+}
+.curriculum .timline .timline-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: rgba(20, 20, 20, 0.822);
+}
+.curriculum .timline .timline-text {
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+    color: rgba(20, 20, 20, 0.700);
+
+}
+
+.portifolio .container {
+    padding-bottom: 40px;
+}
+.portifolio .portifolio-heading {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.portifolio .portifolio-heading h2 {
+    color: rgba(0, 0, 0, 0.796);
+    font-weight: 500;
+}
+.portifolio .portifolio-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.portifolio .portifolio-item-inner {
+    border: 6px solid rgba(0, 0, 0, 0.582);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.portifolio .portifolio-item-inner .portifolio-img img {
+    width: 100%;
+    display: block;
+}
+
+.contact  {
+    min-height: 20vh;
+    display: block;
+    opacity: 1;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(29, 28, 28, 0.692);
+}
+.contact .contact-title h2{
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.885);
+}
+.contact .contact-item {
+    display: flex;
+    justify-content: center;
+}
+.contact .contact-item a {
+    padding: 0 10px;
+    font-size: 20px;
+    color: black;
+}
+.contact .contact-item i {
+    font-size: 28px;
+}
+
+@media (max-width: 1199px) {
+    .aside {
+        left: -270px;
+    }
+    .main-content {
+        padding-left: 0;
+    }
+    .curriculum .personal-info .info-item p span {
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width: 990px) {
+    .portifolio .portifolio-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .home .home-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img {
+        display: none; 
+    }
+}
+@media (max-width: 767px) {
+    
+    .portifolio .portifolio-item,
+    .curriculum .education,
+    .curriculum .experience,
+    .curriculum .skills,
+    .curriculum .projects,
+    .curriculum .personal-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+}
